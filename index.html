@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box1 {
+        width: 500px;
+        height: 500px;
+        background-color: rgb(255, 255, 255);
+        margin: 100px auto;
+        border-radius: 50%;
+        box-shadow: 0 0 10px black;
+        align-content: center;
+    }
+
+    .w {
+        width: 500px;
+        height: 500px;
+        /* background-color: burlywood; */
+        position: absolute;
+
+        transition: all;
+        display: flex;
+        justify-content: center;
+
+        /*      transform: rotate(0); */
+    }
+
+    /* .hour-box:hover{
+
+transform: rotate(0.25turn);
+} */
+    @keyframes roll {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    .hour-box {
+        animation: roll linear 21600s infinite;
+    }
+
+    .min-box {
+        animation: roll linear 3600s infinite;
+    }
+
+    .sec-box {
+        animation: roll steps(60) 60s infinite;
+    }
+
+    .hour {
+        width: 10px;
+        height: 160px;
+        background-color: black;
+        margin-top: 100px;
+    }
+
+    .min {
+        width: 7px;
+        height: 190px;
+        background-color: black;
+        margin-top: 70px;
+    }
+
+    .sec {
+        width: 4px;
+        height: 220px;
+        background-color: black;
+        margin-top: 40px;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div class="hour-box w">
+            <div class="hour"></div>
+        </div>
+
+        <div class="min-box w">
+            <div class="min"></div>
+        </div>
+        <div class="sec-box w">
+            <div class="sec"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
